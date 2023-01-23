@@ -16,7 +16,9 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private boolean drawn;
-
+private Square shed;
+private Triangle pyramid;
+private Circle zero;
     /**
      * Constructor for objects of class Picture
      */
@@ -27,6 +29,9 @@ public class Picture
         roof = new Triangle();  
         sun = new Circle();
         drawn = false;
+        shed = new Square();
+        pyramid = new Triangle();
+        zero = new Circle();
     }
 
     /**
@@ -57,6 +62,24 @@ public class Picture
             sun.changeSize(80);
             sun.makeVisible();
             drawn = true;
+            
+            shed.makeVisible();
+            shed.changeColor("blue");
+            shed.moveHorizontal(60);
+            shed.moveVertical(70);
+            shed.changeSize(45);
+            
+            pyramid.makeVisible();
+            pyramid.changeColor("orange");
+            pyramid.moveHorizontal(-70);
+            pyramid.moveVertical(50);
+            pyramid.changeColor("orange");
+
+            zero.makeVisible();
+            zero.changeColor("black");
+            zero.moveHorizontal(150);
+            zero.moveVertical(-80);
+            
         }
     }
 
@@ -69,6 +92,8 @@ public class Picture
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
+        shed.changeColor("blue");
+        pyramid.changeColor("orange");
     }
 
     /**
